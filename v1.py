@@ -1,6 +1,6 @@
 import requests
 import json
-#GET ALL
+# GET ALL
 URL = "http://127.0.0.1:8000/stuinfo/"
 j = requests.get(URL)
 py_data = j.text
@@ -11,6 +11,8 @@ URL = "http://127.0.0.1:8000/stuinfo/2"
 j = requests.get(URL)
 py_data = j.text
 print(py_data)
+
+
 
 URL = "http://127.0.0.1:8000/add_student/"
 data = {'name':'Havdahav',

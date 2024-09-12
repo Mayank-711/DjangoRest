@@ -17,10 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import api.views as aviews
-
+import apiv2.views as v2views
 urlpatterns = [
     path('admin/', admin.site.urls),
+]
+
+api= [
     path('stuinfo/<int:pk>',aviews.student_detail,name='student_detail'), 
     path('stuinfo/',aviews.student_detail_all,name='student_detail_all'),
-    path('add_student/',aviews.add_student,name='add_stu') 
+    path('add_student/',aviews.add_student,name='add_stu'), 
 ]
+
+api_v2 = [
+    path('employee_data/',v2views.view_employee_api,name='view_employee'),
+]
+
+urlpatterns = urlpatterns + api + api_v2
