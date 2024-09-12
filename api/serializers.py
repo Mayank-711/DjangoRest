@@ -1,4 +1,4 @@
-from api import models
+from .models import Student
 from rest_framework import serializers
 
 class StudenTSerializer(serializers.Serializer):
@@ -6,3 +6,5 @@ class StudenTSerializer(serializers.Serializer):
     age = serializers.IntegerField()
     roll_no = serializers.IntegerField()
     
+    def create(self,validate_data):
+        return Student.objects.create(**validate_data)

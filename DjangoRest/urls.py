@@ -21,5 +21,6 @@ import api.views as aviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('stuinfo/<int:pk>',aviews.student_detail,name='student_detail'), 
-    path('stuinfo/',aviews.student_detail_all,name='student_detail_all'), 
+    path('stuinfo/',aviews.student_detail_all,name='student_detail_all'),
+    path('add_student/',aviews.add_student,name='add_stu') 
 ]
