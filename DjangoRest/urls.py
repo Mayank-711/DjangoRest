@@ -29,7 +29,7 @@ api= [
 ]
 
 api_v2 = [
-    path('employee_data/',v2views.view_employee_api,name='view_employee'),
+    path('employee_api/',v2views.employee_api,name='employee'),
 ]
 
 urlpatterns = urlpatterns + api + api_v2
